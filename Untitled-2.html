@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="color.css">
+<script type="text/javacript">
+	function onLoad(){
+			if(typeof(Storage)=="undefined")
+			{
+				alert("Sorry!!你的浏览器不支持Wed Storage");
+				}else{
+					btn_save.addEcentListener("click",saveToLocalStorage);
+					btn_load.addEcentListener("click",saveFromLocalStorage);
+					}
+		}
+function saveToLocalStorage(){
+		localStorage.username = inputname.value;
+	}
+function loadFromLocalStorage(){
+		show_LocalStorage.innerHTML=localStorage.username+"你好，欢迎来到我的网站";
+	}
+</script>
+</head>
+
+<body>
+<body onload="onLoad()">
+	请输入你的姓名：<input type="text" id="inputname" value="" /><br/>
+    <div id="show_LocalStorage"></div><br />
+    <button id="btn_save">1</button><br />
+    <button id="btn_load">2</button>
+</body>
+</body>
+</html>

@@ -1,0 +1,258 @@
+/*图文列表*/
+article header h2{
+	color: #444444;
+	font-size: 16px;
+	border-bottom: 1px solid #d6d6d6;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+}
+#body-wrapper li{
+	display: inline-block;
+	vertical-align: top;
+	color: #0F0;
+	font-size: 9px;
+}
+#body-wrapper li a{
+	color: #444;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 12px;
+}
+.piclist li{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 202px;
+    height: 149px;
+    text-align: center;
+}
+.piclist li img{
+    width: 202px;
+    height: 124px;
+}
+.piclist li:nth-child(3n+3){
+    margin-right: 0;
+}
+.piclist #xzjianli{
+    text-decoration: none;
+    color: #E4393C;
+}
+@-webkit-keyframes piclist{
+    0%{
+        transform: rotate(0deg) scale(1);
+        -webkit-transform: rotate(0deg) scale(1);
+        opacity: 0.2;
+        border-radius: 1px;
+    }
+    40% {
+        transform: rotate(30deg) scale(1.5);
+        -webkit-transform: rotate(30deg) scale(1.5);
+        opacity: 0.9;
+    }
+    60%{
+        transform: rotate(-30deg) scale(1.5);
+        -webkit-transform: rotate(-30deg) scale(1.5);
+        opacity: 0.9;
+        border-radius: 11px;
+    }
+    90%{
+        transform: rotate(0deg) scale(1);
+        -webkit-transform: rotate(0deg) scale(1);
+        opacity: 0.2;
+    }
+}
+@-moz-keyframes piclist{
+    0%{
+        transform: rotate(0deg) scale(1);
+        -moz-transform: rotate(0deg) scale(1);
+        opacity: 0.2;
+        border-radius: 1px;
+    }
+    40% {
+        transform: rotate(30deg) scale(1.5);
+        -moz-transform: rotate(30deg) scale(1.5);
+        opacity: 0.9;
+    }
+    60%{
+        transform: rotate(-30deg) scale(1.5);
+        -moz-transform: rotate(-30deg) scale(1.5);
+        opacity: 0.9;
+        border-radius: 11px;
+    }
+    90%{
+        transform: rotate(0deg) scale(1);
+        -moz-transform: rotate(0deg) scale(1);
+        opacity: 0.2;
+    }
+}
+.piclist li:hover img{
+    animation-name: piclist;
+    -webkit-animation-name: piclist;
+    -moz-animation-name: piclist;
+    -ms-animation-name: piclist;
+    -o-animation-name: piclist;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+}
+.listnav{
+    margin-top: 20px;
+}
+.listnav li{
+    background: #3598db;
+    padding: 3px 10px;
+    margin-right: 10px;
+}
+#body-wrapper .listnav a{
+	color: #ffffff;
+	font-size: 16px;
+}
+.listnav li.on,.listnav li:hover{
+    background-color: #444;
+    transition: background-color 1s linear;
+    -webkit-transition: background-color 1s linear;
+    -moz-transition: background-color 1s linear;
+    -ms-transition: background-color 1s linear;
+    -o-transition: background-color 1s linear;
+}
+.toplist-tit h3{
+    color: #444;
+    border-bottom: 1px solid #9D9D9D;
+    padding-bottom: 6px;
+}
+/*section#tuijianlist{*/
+    /*margin-top: 20px;*/
+/*}*/
+section.toplist{
+    width: 469px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 19px;
+    margin-right: 9px;
+}
+section.toplist li:before{
+    content: counter(listxh);
+    background: #444;
+    padding: 2px 5px;
+    color: #fff;
+    margin-right: 5px;
+}
+section.toplist li{
+    margin-top: 14px;
+    counter-increment: listxh;
+    display: inline-block;
+    width: 100%;
+    vertical-align: bottom;
+    overflow: hidden;
+    white-space: nowrap;/*不换行*/
+    text-overflow: ellipsis;/*代表...*/
+    transition: text-shadow 1s linear;
+    -webkit-transition: text-shadow 1s linear;
+    -moz-transition: text-shadow 1s linear;
+    -ms-transition: text-shadow 1s linear;
+    -o-transition: text-shadow 1s linear;
+
+}
+section.toplist li:nth-child(1):before,section.toplist li:nth-child(2):before,section.toplist li:nth-child(3):before{
+    background: #3598dc;
+}
+section.toplist li:last-child:before{
+    padding: 2px 2px;
+    font-size: 14px;
+}
+section.toplist a{
+    color: #444444;
+    text-decoration: none;
+}
+section.toplist li:hover{
+    text-shadow: 1px 2px 9px #000;
+}
+.newslist li{
+    margin-top: 10px;
+    transition: text-shadow 1s linear;
+    -webkit-transition: text-shadow 1s linear;
+    -moz-transition: text-shadow 1s linear;
+    -ms-transition: text-shadow 1s linear;
+    -o-transition: text-shadow 1s linear;
+}
+.newslist li:hover{
+    text-shadow: 1px 4px 5px #000;
+}
+.newslist li:nth-child(5n+5){
+    border-bottom: 1px solid #c6c2c2;
+    padding-bottom: 10px;
+}
+.newslist li:last-child{
+    border-bottom: 0;
+}
+.newslist li a{
+    display: inline-block;
+    width: 510px;
+    vertical-align: top;
+}
+.newslist li time{
+	display: inline-block;
+	width: 117px;
+	vertical-align: top;
+	color: #444444;
+	font-size: 12px;
+	text-align: left;
+}
+
+/*内容页*/
+header.content-h1 h1{
+    font-weight: normal;
+    margin: 20px 0;
+}
+div.title-bar .bdsharebuttonbox.bdshare-button-style0-16 {
+    display: inline-block;
+    vertical-align: bottom;
+}
+div.title-bar .bdsharebuttonbox.bdshare-button-style0-16 a{
+    border: 0;
+    padding-right: 0px;
+}
+header div.title-bar{
+    font-size: 10px;
+    font-family: "宋体";
+    color: #808080;
+    border-bottom: solid 1px #CAC7C7;
+    padding-bottom: 2px;
+    line-height: 28px;
+}
+header div.title-bar a{
+    color: #3598DB;
+    border-right: solid 1px #CAC7C7;
+    padding-right: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+header div.title-bar time{
+    margin-right: 20px;
+}
+.content-nr{
+    color: #444;
+    padding: 20px 0;
+    text-indent: 34px;
+    line-height: 30px;
+}
+section.xiangguanyuedu{
+    margin-top: 20px;
+    height: 38px;
+    overflow: hidden;
+}
+section.xiangguanyuedu a{
+    text-decoration: none;
+    color: #3598DB;
+}
+section.xiangguanyuedu a{
+    margin-right: 10px;
+}
